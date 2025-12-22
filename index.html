@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Recruiter Landing Page</title>
+    <!-- Google Fonts: Manrope -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#137fec',
+              'background-light': '#f6f7f8',
+              'background-dark': '#101922',
+            },
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+            },
+            borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display transition-colors duration-200"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <!-- Header/Navigation -->
+      <header class="flex items-center justify-between p-5 pt-6 w-full max-w-lg mx-auto">
+        <div class="flex items-center gap-2 text-gray-900 dark:text-white">
+          <span class="material-symbols-outlined text-3xl text-primary">verified_user</span>
+          <span class="font-bold text-lg tracking-tight hidden sm:block">AM.Design</span>
+        </div>
+        <button
+          class="theme-toggle flex size-10 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-900 dark:text-white"
+        >
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+      </header>
+      <!-- Main Content Area (Centered) -->
+      <main
+        class="flex-1 flex flex-col items-center justify-center px-6 py-4 w-full max-w-lg mx-auto gap-8"
+      >
+        <!-- Hero Section -->
+        <div class="flex flex-col items-center w-full gap-6">
+          <!-- Avatar with Pop-out Effect -->
+          <div class="relative mt-8 mb-4 group">
+            <!-- Glow Background -->
+            <div
+              class="absolute -inset-4 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 transition-all duration-500"
+            ></div>
+
+            <!-- Animated Circle Border (Behind) -->
+            <div
+              class="absolute inset-0 rounded-full border-[3px] border-primary/30 group-hover:scale-110 transition-transform duration-500"
+            ></div>
+
+            <!-- The Image Container -->
+            <div
+              class="relative h-36 w-36 rounded-full border-4 border-white dark:border-[#1c2936] bg-cover bg-center shadow-2xl transition-transform duration-300 group-hover:-translate-y-2 overflow-visible"
+              data-alt="Professional portrait of Alex Mercer"
+              style="
+                background-image: url('assets/aldika2.jpeg');
+                background-size: 110%; /* Zoom slightly to fill */
+              "
+            >
+              <!-- NOTE: To have a TRUE 'pop out' effect (head over border),
+                     we would need a transparent PNG image.
+                     With a JPG URL, we simulate 'modern 3D' by lifting the whole circle
+                     and adding a strong shadow/glow. -->
+            </div>
+
+            <!-- Status Indicator -->
+            <div
+              class="absolute bottom-2 right-2 h-6 w-6 rounded-full bg-green-500 border-4 border-white dark:border-[#101922] z-10"
+            ></div>
+          </div>
+          <!-- Typography Block -->
+          <div class="flex flex-col items-center text-center space-y-2">
+            <h1 class="text-gray-900 dark:text-white text-3xl font-extrabold tracking-tight">
+              Aldika Gagah Prasetya
+            </h1>
+            <p class="text-primary font-semibold text-sm uppercase tracking-wider">
+              Junior Full-Stack Developer
+            </p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm font-medium">
+              AI-Driven Backend Enthusiast
+            </p>
+          </div>
+        </div>
+        <!-- Value Statement Card -->
+        <div
+          class="w-full bg-white dark:bg-[#1a2632] p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800"
+        >
+          <p
+            class="text-gray-700 dark:text-gray-200 text-base font-medium leading-relaxed text-center"
+          >
+            "Junior Full-Stack Developer with a backend-first mindset, specializing in Go-based
+            APIs, MongoDB, and modern cloud-ready architectures. Focused on clean code, security,
+            and long-term scalability."
+          </p>
+        </div>
+        <!-- Action Stack -->
+        <div class="flex flex-col gap-3 w-full">
+          <!-- Primary Button -->
+          <!-- Primary Button -->
+          <a
+            href="about.html"
+            class="group flex w-full items-center justify-center gap-3 rounded-lg bg-primary h-14 px-6 text-white shadow-lg shadow-primary/25 hover:bg-blue-600 transition-all active:scale-[0.98]"
+          >
+            <span class="material-symbols-outlined text-[20px]">visibility</span>
+            <span class="text-base font-bold">View Projects</span>
+          </a>
+          <!-- Secondary Button -->
+          <!-- Secondary Button -->
+          <a
+            href="skills.html"
+            class="group flex w-full items-center justify-center gap-3 rounded-lg bg-transparent border-2 border-primary/20 hover:border-primary/50 h-14 px-6 text-primary dark:text-primary transition-all active:scale-[0.98]"
+          >
+            <span class="material-symbols-outlined text-[20px]">school</span>
+            <span class="text-base font-bold">View Skills</span>
+          </a>
+          <!-- Tertiary Button -->
+          <a
+            href="https://wa.me/6288983640493"
+            class="flex w-full items-center justify-center gap-2 h-12 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold"
+          >
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </main>
+      <!-- Social Proof Footer -->
+      <footer class="w-full max-w-lg mx-auto px-6 pb-8 pt-2">
+        <div class="flex justify-center gap-6">
+          <a
+            class="flex flex-col items-center gap-1 group"
+            href="https://www.linkedin.com/in/aldika-prasetya-176475302/"
+          >
+            <div
+              class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-[#1a2632] group-hover:bg-primary/10 transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-hover:text-primary text-[20px]"
+                >business_center</span
+              >
+            </div>
+            <span
+              class="text-[10px] font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wide"
+              >LinkedIn</span
+            >
+          </a>
+          <a class="flex flex-col items-center gap-1 group" href="https://github.com/aldikagagah">
+            <div
+              class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-[#1a2632] group-hover:bg-primary/10 transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-hover:text-primary text-[20px]"
+                >code</span
+              >
+            </div>
+            <span
+              class="text-[10px] font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wide"
+              >GitHub</span
+            >
+          </a>
+          <a
+            class="flex flex-col items-center gap-1 group"
+            href="https://www.canva.com/design/DAG1FSo6Mjg/eiDKfhbnrev-_nGNiHcWTQ/edit"
+          >
+            <div
+              class="flex items-center justify-center size-10 rounded-full bg-gray-100 dark:bg-[#1a2632] group-hover:bg-primary/10 transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-hover:text-primary text-[20px]"
+                >folder_open</span
+              >
+            </div>
+            <span
+              class="text-[10px] font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wide"
+              >Portfolio</span
+            >
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

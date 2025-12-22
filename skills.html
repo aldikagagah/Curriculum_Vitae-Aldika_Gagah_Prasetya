@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Skills &amp; Tech Stack</title>
+    <!-- Google Fonts: Manrope -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Theme Config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#137fec',
+              'background-light': '#f6f7f8',
+              'background-dark': '#101922',
+              'surface-dark': '#1c2b3e',
+              'surface-light': '#ffffff',
+            },
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+            },
+            borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+      /* Hide scrollbar for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <!-- Custom Interactions CSS -->
+    <link rel="stylesheet" href="assets/css/interactions.css">
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200"
+  >
+    <div
+      class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl"
+    >
+      <!-- Sticky Header -->
+      <div
+        class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800"
+      >
+        <div class="flex items-center p-4 justify-between">
+          <a href="index.html"
+            class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+          >
+            <span class="material-symbols-outlined">arrow_back</span>
+          </a>
+          <h2
+            class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+          >
+            Skills &amp; Tech Stack
+          </h2>
+          <div class="flex w-10 items-center justify-end">
+            <button
+              class="flex items-center justify-center rounded-full h-10 w-10 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-900 dark:text-white"
+            >
+              <span class="material-symbols-outlined">search</span>
+            </button>
+          </div>
+        </div>
+        <!-- Tabs -->
+        <div class="px-4">
+          <div class="flex border-b border-slate-200 dark:border-slate-800 justify-between">
+            <button
+              id="tab-domain"
+              class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-2 flex-1 transition-all"
+            >
+              <p class="text-sm font-bold leading-normal tracking-[0.015em]">By Domain</p>
+            </button>
+            <button
+              id="tab-level"
+              class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-[#92adc9] pb-3 pt-2 flex-1 hover:text-slate-700 dark:hover:text-slate-300 transition-all"
+            >
+              <p class="text-sm font-bold leading-normal tracking-[0.015em]">By Level</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Scrollable Content -->
+      <div id="skills-content" class="flex-1 flex flex-col p-4 gap-5">
+        <!-- Intro -->
+        <p
+          class="text-slate-500 dark:text-[#92adc9] text-sm font-medium leading-relaxed text-center px-2"
+        >
+          A transparent, honesty-first overview of my technical toolkit and proficiency levels.
+        </p>
+        <!-- Legend Accordion -->
+        <details
+          class="group flex flex-col rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark overflow-hidden transition-all duration-300 open:pb-2"
+        >
+          <summary
+            class="flex cursor-pointer items-center justify-between gap-4 p-3 bg-slate-50 dark:bg-[#25364b] group-open:bg-white dark:group-open:bg-surface-dark transition-colors"
+          >
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[20px]">info</span>
+              <p class="text-slate-900 dark:text-white text-sm font-bold leading-normal">
+                Proficiency Legend
+              </p>
+            </div>
+            <span
+              class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform duration-300"
+              >expand_more</span
+            >
+          </summary>
+          <div class="px-3 pt-2 flex flex-col gap-2">
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-2 h-2 rounded-full bg-primary shrink-0"></div>
+              <p class="text-xs text-slate-600 dark:text-slate-300">
+                <strong class="text-primary">Production:</strong> Production: Used in real projects with complete development lifecycle (design, build, deploy).
+
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-2 h-2 rounded-full bg-purple-500 shrink-0"></div>
+              <p class="text-xs text-slate-600 dark:text-slate-300">
+                <strong class="text-purple-500">Academic:</strong> Used in capstone projects,
+                hackathons, or university coursework.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-2 h-2 rounded-full bg-slate-400 shrink-0"></div>
+              <p class="text-xs text-slate-600 dark:text-slate-300">
+                <strong class="text-slate-400">Learning:</strong> Currently exploring, reading
+                documentation, or building Hello World apps.
+              </p>
+            </div>
+          </div>
+        </details>
+        <!-- View Container -->
+        <div id="domain-view" class="flex flex-col gap-6 animate-fade-in">
+        <!-- Frontend Section -->
+        <div class="flex flex-col gap-3">
+          <div
+            class="flex items-center gap-2 pb-1 border-b border-slate-200 dark:border-slate-800/50"
+          >
+            <span class="material-symbols-outlined text-primary">devices</span>
+            <h3 class="text-slate-900 dark:text-white text-lg font-bold">Frontend</h3>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Skill Card: React (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-[#61DAFB]"
+                >
+                  <span class="material-symbols-outlined">code_blocks</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-900 dark:text-white font-bold text-base">React</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-primary"
+                    >Production</span
+                  >
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg"
+                >check_circle</span
+              >
+            </div>
+            <!-- Skill Card: TypeScript (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-[#3178C6]"
+                >
+                  <span class="material-symbols-outlined">data_object</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-900 dark:text-white font-bold text-base">TypeScript</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-purple-500"
+                    >Academic</span
+                  >
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg"
+                >check_circle</span
+              >
+            </div>
+            <!-- Skill Card: Tailwind (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-cyan-50 dark:bg-cyan-900/20 text-[#38BDF8]"
+                >
+                  <span class="material-symbols-outlined">style</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-900 dark:text-white font-bold text-base">Tailwind</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-purple-500"
+                    >Academic</span
+                  >
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg"
+                >check_circle</span
+              >
+            </div>
+            <!-- Skill Card: SwiftUI (Academic) -->
+            <!-- <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm opacity-90"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-purple-50 dark:bg-purple-900/20 text-purple-500"
+                >
+                  <span class="material-symbols-outlined">smartphone</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-700 dark:text-slate-200 font-semibold text-base"
+                    >SwiftUI</span
+                  >
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-purple-500"
+                    >Academic</span
+                  >
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <!-- Backend Section -->
+        <div class="flex flex-col gap-3 pt-2">
+          <div
+            class="flex items-center gap-2 pb-1 border-b border-slate-200 dark:border-slate-800/50"
+          >
+            <span class="material-symbols-outlined text-primary">dns</span>
+            <h3 class="text-slate-900 dark:text-white text-lg font-bold">Backend</h3>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Skill Card: Node.js (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-green-50 dark:bg-green-900/20 text-[#68A063]"
+                >
+                  <span class="material-symbols-outlined">javascript</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-900 dark:text-white font-bold text-base">Node.js</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-primary"
+                    >Production</span
+                  >
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg"
+                >check_circle</span
+              >
+            </div>
+            <!-- Skill Card: Python (Academic) -->
+            <!-- <div
+              class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm opacity-90"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-purple-50 dark:bg-purple-900/20 text-purple-500"
+                >
+                  <span class="material-symbols-outlined">terminal</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-700 dark:text-slate-200 font-semibold text-base"
+                    >Python</span
+                  >
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-purple-500"
+                    >Academic</span
+                  >
+                </div>
+              </div>
+            </div> -->
+            <!-- Skill Card: Go (Learning) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-background-dark border border-dashed border-slate-300 dark:border-slate-700 shadow-none opacity-75"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-500"
+                >
+                  <span class="material-symbols-outlined">school</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-600 dark:text-slate-400 font-medium text-base">Go</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-slate-500"
+                    >Learning</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Database & DevOps Section -->
+        <div class="flex flex-col gap-3 pt-2 pb-8">
+          <div
+            class="flex items-center gap-2 pb-1 border-b border-slate-200 dark:border-slate-800/50"
+          >
+            <span class="material-symbols-outlined text-primary">cloud_queue</span>
+            <h3 class="text-slate-900 dark:text-white text-lg font-bold">DevOps &amp; Tools</h3>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Skill Card: PostgreSQL (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-400"
+                >
+                  <span class="material-symbols-outlined">database</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-900 dark:text-white font-bold text-base">PostgreSQL</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-primary"
+                    >Production</span
+                  >
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg"
+                >check_circle</span
+              >
+            </div>
+            <!-- Skill Card: MongoDB (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm opacity-90"
+            >
+              <div class="flex items-center gap-3">
+                <!-- MongoDB Icon -->
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-emerald-50 dark:bg-emerald-900/20"
+                >
+                  <svg
+                    viewBox="0 0 256 549"
+                    class="h-6 w-6 fill-emerald-600 dark:fill-emerald-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M128.5 0c-3.4 6.7-7.2 13.1-11.4 19.2-7.1 10.4-14.8 20.4-22.2 30.8C71.7 85.3 48 131.8 48 192.7c0 55.7 21.7 104.3 58.5 139.8 10.3 9.9 18.3 23.2 18.3 39.1v146.2h12.4V371.6c0-15.9 8-29.2 18.3-39.1 36.8-35.5 58.5-84.1 58.5-139.8 0-60.9-23.7-107.4-46.9-142.7-7.4-10.4-15.1-20.4-22.2-30.8-4.2-6.1-8-12.5-11.4-19.2z"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Text -->
+                <div class="flex flex-col">
+                  <span class="text-slate-700 dark:text-slate-200 font-semibold text-base">
+                    MongoDB
+                  </span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-primary">
+                    Production
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill Card: Cloud Basics (Production) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-orange-50 dark:bg-orange-900/20 text-orange-500"
+                >
+                  <span class="material-symbols-outlined">cloud</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-900 dark:text-white font-bold text-base">Cloud Basics</span>
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-purple-500"
+                    >Academic</span
+                  >
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-lg"
+                >check_circle</span
+              >
+            </div>
+            <!-- Skill Card: Docker (Academic) -->
+            <div
+              class="proximity-card flex items-center justify-between p-3 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm opacity-90"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="flex items-center justify-center size-10 rounded-lg bg-purple-50 dark:bg-purple-900/20 text-purple-500"
+                >
+                  <span class="material-symbols-outlined">deployed_code</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-slate-700 dark:text-slate-200 font-semibold text-base"
+                    >Docker</span
+                  >
+                  <span class="text-[10px] uppercase tracking-wider font-bold text-purple-500"
+                    >Academic</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Hidden Level View Container -->
+      <div id="level-view" class="hidden flex flex-col gap-6 animate-fade-in"></div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/skills.js"></script>
+</html>

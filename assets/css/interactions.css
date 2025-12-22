@@ -1,0 +1,82 @@
+/* Cursor Proximity Interaction Styles */
+.proximity-card {
+  position: relative;
+  overflow: hidden; /* Ensures the glow doesn't spill out */
+  --x: 0px;
+  --y: 0px;
+  /* Default background transition */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/*
+ * The glow effect is created using a pseudo-element.
+ * It's a radial gradient that follows the cursor position (--x, --y).
+ */
+.proximity-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    800px circle at var(--x) var(--y),
+    rgba(19, 127, 236, 0.15), /* Primary color with low opacity */
+    transparent 40%
+  );
+  z-index: 10; /* Above content background, below text if needed */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Let clicks pass through */
+}
+
+/* Show the glow on hover (container hover, not just pseudoelement) */
+.proximity-card:hover::before {
+  opacity: 1;
+}
+
+/* Optional: Slight border highlight enhancement */
+.proximity-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* border width */
+  background: radial-gradient(
+    600px circle at var(--x) var(--y),
+    rgba(19, 127, 236, 0.4),
+    transparent 40%
+  );
+  -webkit-mask:
+     linear-gradient(#fff 0 0) content-box,
+     linear-gradient(#fff 0 0);
+  mask:
+     linear-gradient(#fff 0 0) content-box,
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.proximity-card:hover::after {
+  opacity: 1;
+}
+
+/* 3D Tilt Effect */
+.proximity-card {
+  /* Default values */
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+
+  /* Perspective for 3D effect */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+
+  /* Apply rotation */
+  transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+
+  /* Smooth reset when mouse leaves */
+  transition: transform 0.1s ease-out, background-color 0.3s, border-color 0.3s;
+}
