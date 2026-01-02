@@ -3,163 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume - Aldika Gagah Prasetya</title>
+    <title>Preview Resume - Aldika Gagah Prasetya</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="assets/aldika3.png" />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#137fec',
+              'background-dark': '#101922',
+            },
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
     <style>
       body {
         font-family: 'Manrope', sans-serif;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      @page {
-        margin: 0;
-      }
-      @media print {
-        .no-print {
-          display: none !important;
-        }
-        body {
-          padding: 20px;
-        }
       }
     </style>
   </head>
-  <body class="bg-white text-slate-900 p-4 md:p-8 max-w-4xl mx-auto">
-    <!-- Action Bar (Hidden in Print) -->
-    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
-      <button
-        onclick="window.print()"
-        class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:bg-blue-700 transition"
-      >
-        Save as PDF
-      </button>
-      <button
-        onclick="window.close()"
-        class="bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-bold hover:bg-slate-300 transition"
-      >
-        Close
-      </button>
-    </div>
-
-    <!-- Header -->
-    <header class="border-b-2 border-slate-900 pb-6 mb-6">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 text-center md:text-left">
-        <div
-          class="h-24 w-24 rounded-full bg-slate-200 overflow-hidden mb-4 shrink-0 border-2 border-slate-900 md:mb-0"
-        >
-          <!-- Using the same image URL as index.html -->
-          <img src="assets/aldika2.jpeg" class="h-full w-full object-cover" />
-        </div>
-        <div>
-          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight uppercase">Aldika Gagah Prasetya</h1>
-          <p class="text-xl text-blue-600 font-bold tracking-wide mt-1">
-            Junior Full-Stack Developer
-          </p>
-          <div class="flex flex-wrap justify-center md:justify-start gap-2 md:gap-4 mt-2 text-sm text-slate-600 font-medium">
-            <span>Cilacap, Central Java, Indonesia</span>
-            <span class="hidden md:inline">•</span>
-            <span>aldikagpofficial@gmail.com</span>
-            <span class="hidden md:inline">•</span>
-            <span>linkedin.com/in/aldika-prasetya</span>
-          </div>
+  <body class="dark bg-background-dark min-h-screen flex flex-col">
+    <!-- Header with Buttons -->
+    <header
+      class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-slate-800 px-4 py-3"
+    >
+      <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
+        <h1 class="text-white font-bold text-lg truncate">Preview Resume</h1>
+        <div class="flex items-center gap-2">
+          <!-- Download Button -->
+          <a
+            href="assets/cv/SURAT LAMARAN PEKERJAAN ALVITA LILY PRASASTI.pdf"
+            download="CV_Aldika_Gagah_Prasetya.pdf"
+            class="flex items-center gap-2 bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg transition-all active:scale-95"
+          >
+            <span class="material-symbols-outlined text-xl">download</span>
+            <span class="hidden sm:inline">Download</span>
+          </a>
+          <!-- Close Button -->
+          <button
+            onclick="window.history.back();"
+            class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-bold transition-all active:scale-95"
+          >
+            <span class="material-symbols-outlined text-xl">close</span>
+            <span class="hidden sm:inline">Close</span>
+          </button>
         </div>
       </div>
     </header>
 
-    <!-- Bio -->
-    <section class="mb-8">
-      <h2 class="text-sm font-bold uppercase border-b border-slate-300 pb-1 mb-3">
-        Professional Summary
-      </h2>
-      <p class="text-sm text-slate-700 leading-relaxed text-justify md:text-left">
-        Junior developer with a strong interest in backend development. Experienced in building
-        RESTful APIs using <strong>Go (Fiber)</strong> and working with <strong>MongoDB</strong>.
-        Passionate about learning clean architecture, backend fundamentals, and scalable system
-        design through hands-on projects.
-      </p>
-    </section>
-
-    <!-- Skills -->
-    <section class="mb-8">
-      <h2 class="text-lg font-bold text-slate-900 uppercase border-b border-slate-300 mb-4 pb-1">
-        Technical Skills
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-        <div>
-          <h3 class="font-bold text-blue-600 text-sm mb-2">Frontend</h3>
-          <ul class="text-sm text-slate-700 list-disc list-inside space-y-1">
-            <li><strong>React</strong> (Production)</li>
-            <li>Tailwind CSS (Academic)</li>
-            <li>TypeScript (Academic)</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-blue-600 text-sm mb-2">Backend & Cloud</h3>
-          <ul class="text-sm text-slate-700 list-disc list-inside space-y-1">
-            <li><strong>Node.js</strong> (Production)</li>
-            <li>PostgreSQL (Production)</li>
-            <li>MongoDB (Production)</li>
-            <li>Cloud Basics / Docker (Academic)</li>
-            <li>Go (Learning)</li>
-          </ul>
+    <!-- PDF Viewer -->
+    <main class="flex-1 flex flex-col p-4">
+      <div
+        class="flex-1 max-w-4xl w-full mx-auto bg-slate-900 rounded-xl overflow-hidden shadow-2xl"
+      >
+        <!-- Desktop: Embed PDF -->
+        <embed
+          src="assets/cv/SURAT LAMARAN PEKERJAAN ALVITA LILY PRASASTI.pdf"
+          type="application/pdf"
+          class="hidden md:block w-full h-full min-h-[85vh]"
+        />
+        <!-- Mobile: Fallback Message -->
+        <div
+          class="md:hidden flex flex-col items-center justify-center p-8 text-center min-h-[50vh] gap-6"
+        >
+          <div class="bg-slate-800 p-6 rounded-2xl">
+            <span class="material-symbols-outlined text-6xl text-primary">picture_as_pdf</span>
+          </div>
+          <div>
+            <h2 class="text-white text-xl font-bold mb-2">Preview tidak tersedia di mobile</h2>
+            <p class="text-slate-400 text-sm mb-6">
+              Silakan download file PDF untuk melihat di perangkat Anda.
+            </p>
+            <a
+              href="assets/cv/SURAT LAMARAN PEKERJAAN ALVITA LILY PRASASTI.pdf"
+              download="CV_Aldika_Gagah_Prasetya.pdf"
+              class="inline-flex items-center gap-2 bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition-all active:scale-95"
+            >
+              <span class="material-symbols-outlined">download</span>
+              Download PDF
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
 
-    <!-- Experience -->
-    <section class="mb-8">
-      <h2 class="text-lg font-bold text-slate-900 uppercase border-b border-slate-300 mb-4 pb-1">
-        Experience
-      </h2>
-      <!-- Project Experience -->
-      <div>
-        <div class="flex justify-between items-baseline mb-1">
-          <h3 class="font-bold text-slate-900">Junior Backend Developer (Project-Based)</h3>
-          <span class="text-xs font-bold text-slate-500">2025</span>
-        </div>
-
-        <p class="text-blue-600 text-sm font-semibold mb-2">
-          Bharata Task Management || PT. Bharata International
-        </p>
-
-
-        <ul class="list-disc list-inside text-sm text-slate-700 space-y-1">
-          <li>
-            Developed RESTful APIs using <strong>Go (Fiber)</strong> for task and workflow
-            management.
-          </li>
-          <li>
-            Implemented <strong>MongoDB</strong> for storing tasks, statuses, and user-related data.
-          </li>
-          <li>Designed task status flow such as Request, Todo, OnGoing, Testing, and Done.</li>
-          <li>
-            Applied environment-based configuration using <code>.env</code> files for database and
-            app settings.
-          </li>
-          <li>
-            Improved understanding of backend fundamentals including API design, data modeling, and
-            clean project structure.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <footer class="text-center text-xs text-slate-400 mt-12 pt-4 border-t border-slate-100">
-      &copy; 2025 Aldika Gagah Prasetya. Generated from Portfolio.
-    </footer>
-
-    <script>
-      // Auto-print on load if query param set, or just ready
-      window.onload = () => {
-        // setTimeout(() => window.print(), 500); // Optional auto-print
-      }
-    </script>
+    <!-- Cursor Trail -->
     <script src="assets/js/cursor-trail.js"></script>
   </body>
 </html>
