@@ -73,34 +73,13 @@
       <div
         class="flex-1 max-w-4xl w-full mx-auto bg-slate-900 rounded-xl overflow-hidden shadow-2xl"
       >
-        <!-- Desktop: Embed PDF -->
-        <embed
-          src="assets/cv/SURAT LAMARAN PEKERJAAN ALVITA LILY PRASASTI.pdf"
-          type="application/pdf"
-          class="hidden md:block w-full h-full min-h-[85vh]"
-        />
-        <!-- Mobile: Fallback Message -->
-        <div
-          class="md:hidden flex flex-col items-center justify-center p-8 text-center min-h-[50vh] gap-6"
-        >
-          <div class="bg-slate-800 p-6 rounded-2xl">
-            <span class="material-symbols-outlined text-6xl text-primary">picture_as_pdf</span>
-          </div>
-          <div>
-            <h2 class="text-white text-xl font-bold mb-2">Preview tidak tersedia di mobile</h2>
-            <p class="text-slate-400 text-sm mb-6">
-              Silakan download file PDF untuk melihat di perangkat Anda.
-            </p>
-            <a
-              href="assets/cv/SURAT LAMARAN PEKERJAAN ALVITA LILY PRASASTI.pdf"
-              download="CV_Aldika_Gagah_Prasetya.pdf"
-              class="inline-flex items-center gap-2 bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg transition-all active:scale-95"
-            >
-              <span class="material-symbols-outlined">download</span>
-              Download PDF
-            </a>
-          </div>
-        </div>
+        <!-- Google Drive PDF Viewer (Works on Desktop & Mobile) -->
+        <iframe
+          src="https://drive.google.com/file/d/1fZtQYemRyoGdgc8Ec1VyjBMPtkg1t8ZD/preview"
+          class="w-full h-full min-h-[85vh]"
+          frameborder="0"
+          allow="autoplay"
+        ></iframe>
       </div>
     </main>
 
